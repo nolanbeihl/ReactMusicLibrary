@@ -14,7 +14,7 @@ class App extends Component {
 
     componentDidMount(){
         this.getSongs()
-        this.generateSong()
+    
     }
 
     async getSongs(){
@@ -25,21 +25,13 @@ class App extends Component {
         })
     }
     
-    async generateSong(){
-        let response = await axios.put('http://127.0.0.1:8000/music/')
-        console.log(response.data)
-        this.setState({
-            songs:response.data
-        })
-    }
-
 
     render() { 
         return (
             <div>
              <h1>This is the app component</h1>
              <MusicTable songs={this.state.songs} />
-             <SongForm forms={this.state.songs}/>
+             <SongForm />
              </div>
              );
     }
