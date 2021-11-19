@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class MusicTable extends Component {
+class SongForm extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -11,10 +11,10 @@ class MusicTable extends Component {
     render() { 
         return ( 
             <div>
-            {this.props.songs.map((element)=><h1>{element.title} , {element.genre}</h1>)}
+            {/* {this.props.songs.map((element)=><h1>{element.genre}</h1>)} */}
             </div>
          );
     }
 }
  
-export default MusicTable;
+export default SongForm;

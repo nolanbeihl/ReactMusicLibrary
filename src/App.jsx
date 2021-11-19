@@ -1,6 +1,7 @@
 import { Component } from "react";
 import MusicTable from "./Components/MusicTable";
 import axios from "axios";
+import SongForm from "./Components/SongForm";
 
 class App extends Component {
     constructor(props) {
@@ -29,7 +30,8 @@ class App extends Component {
         return (
             <div>
              <h1>This is the app component</h1>
-             <MusicTable songs={this.state.songs}/>
+             <MusicTable songs={this.state.songs} />
+             <SongForm forms={this.state.songs}/>
              </div>
              );
     }
