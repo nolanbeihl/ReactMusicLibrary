@@ -14,6 +14,7 @@ class App extends Component {
 
     componentDidMount(){
         this.getSongs()
+        this.generateSong()
     }
 
     async getSongs(){
@@ -23,7 +24,14 @@ class App extends Component {
             songs: response.data
         })
     }
-
+    
+    async generateSong(){
+        let response = await axios.put('http://127.0.0.1:8000/music/')
+        console.log(response.data)
+        this.setState({
+            songs:response.data
+        })
+    }
 
 
     render() { 
