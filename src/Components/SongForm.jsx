@@ -16,10 +16,10 @@ class SongForm extends Component {
             [event.target.name] : event.target.value
         })
     };
-    
+  
     handleSubmit =(event) =>{
         event.preventDefault();
-        this.generateSong(this.state);
+        // this.generateSong(this.state);
     }
 
     render() { 
@@ -35,7 +35,7 @@ class SongForm extends Component {
                 <input type="text" name="genre" onChange={this.handleChange} value={this.state.genre}/>
                 <label>Release Date</label>
                 <input type="text" name="releaseDate" onChange={this.handleChange} value={this.state.releaseDate}/>
-                <button type="submit">Add Song To Table</button>
+                <button onClick={this.handleSubmit}>Add Song To Table</button>
             </form>
          );
     }
