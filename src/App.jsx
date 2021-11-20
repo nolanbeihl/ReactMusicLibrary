@@ -2,6 +2,7 @@ import { Component } from "react";
 import MusicTable from "./Components/MusicTable";
 import axios from "axios";
 import SongForm from "./Components/SongForm";
+import "./App.css";
 
 class App extends Component {
     constructor(props) {

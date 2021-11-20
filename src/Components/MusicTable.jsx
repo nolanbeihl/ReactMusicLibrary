@@ -11,9 +11,30 @@ class MusicTable extends Component {
 
     render() { 
         return ( 
-            <div>
-            {this.props.songs.map((element)=><h1>{element.title} , {element.artist} , {element.album} , {element.genre} , {element.release_date}</h1>)}
-            <button onClick={this.removeSong}> Remove Song From Table </button>
+            <div className="app-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Artist</th>
+                            <th>Album</th>
+                            <th>Genre</th>
+                            <th>Release Date</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.props.songs.map((i)=> (
+                            <tr>
+                                <td>i.title</td>
+                                <td>i.artist</td>
+                                <td>i.album</td>
+                                <td>i.genre</td>
+                                <td>i.release_date</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                    </table>
             </div>
          );
     }
