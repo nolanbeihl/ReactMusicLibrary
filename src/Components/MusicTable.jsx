@@ -26,11 +26,11 @@ class MusicTable extends Component {
                     <tbody>
                         {this.props.songs.map((i)=> (
                             <tr>
-                                <td>i.title</td>
-                                <td>i.artist</td>
-                                <td>i.album</td>
-                                <td>i.genre</td>
-                                <td>i.release_date</td>
+                                <td>{i.title}</td>
+                                <td>{i.artist}</td>
+                                <td>{i.album}</td>
+                                <td>{i.genre}</td>
+                                <td>{i.release_date}</td>
                             </tr>
                         ))}
                     </tbody>
